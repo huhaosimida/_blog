@@ -1,0 +1,66 @@
+<%- include('layout') %>
+
+
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<ul class="breadcrumb">
+				<li>
+					 <a href="/admin">首页</a>
+				</li>
+				<li>
+					 评论
+				</li>
+				<li class="active">
+					评论列表
+				</li>
+			</ul>			
+			<h3>评论列表</h3>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>
+							用户名
+						</th>
+						<th>
+							发表时间
+						</th>
+						<th>
+							发表内容
+						</th>
+						<th>
+							操作
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% for(var i=0; i<contents.length;i++) { %>					
+						<tr>
+						<td>
+							<%= contents[i].comment[i].username %>
+						</td>
+						<td>
+							<%= moment(contents[i].comment[i].postTime).format('YYYY-MM-DD : HH:MM:SS') %>
+						</td>
+						<td>
+							<%= contents[i].comment[i].comment %>
+						</td>						
+						<td>
+            				<a href="">删除评论</a>
+						</td>
+					</tr>			
+					<% } %>	
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<nav>
+    <ul class="pager">
+        <li class="previous"><a href=""><span aria-hidden="true">&larr;</span>上一页</a></li>
+        <li class="next"><a href="">下一页<span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+	</nav>
+</div>
+
+</body>
+</html>

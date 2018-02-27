@@ -1,0 +1,243 @@
+html {
+  font-size: 100%;
+}
+body {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  font-family: "Open sans", Helvetica, Arial, sans-serif;
+  color: #666666;
+ /* #FFFCF4*/
+  padding: 0;
+}
+.hr1{	
+    margin-top: 1px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+#head {
+  background: #f4f4f4 url(../images/bg_head.jpg) top center;
+  background-size: cover;
+  color: #7C7C7C;
+  padding: 30px 0 35px 0;
+}
+#head img.img-circle {
+  display: block;
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  border: 9px solid rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+}
+#head .title {
+  font-family: Alice, Georgia, serif;
+  font-size: 49px;
+  font-size: 3.0625rem;
+}
+#head .title a {
+  text-decoration: none;
+  color: #333333;
+}
+#head .tagline {
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.2em;
+  color: #7C7C7C;
+  margin: 5px 0 0;
+}
+#head .tagline b {
+  font-weight: normal;
+}
+#head .tagline a {
+  color: #5E5E5E;
+}
+
+.navbar {
+  border-width: 1px 0;
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+  width: 100%;
+}
+.navbar-collapse {
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+  font-family: Alice, Georgia, serif;
+  font-weight: 200;
+}
+.navbar-collapse .navbar-nav {
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.navbar-collapse .navbar-nav > li {
+  float: none;
+  display: inline-block;
+
+}
+.navbar-collapse .navbar-nav > li > a {
+  padding: 20px 30px;
+  color: #000000;
+  background-color: #ffffff;
+
+}
+/*内容*/
+.label{
+  background: #88acdb;
+}
+.entry-title {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin: 0px 0 25px;
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-size: 2.25rem;
+  letter-spacing: 1px;
+}
+.entry-title a {
+  color: #333333;
+}
+.entry-header {
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-size: 1.125rem;
+  font-style: italic;
+  font-weight: normal;
+  color: #a5a5a5;
+  margin: 0 0 15px 0;
+  padding: 5px 0;
+}
+.entry-content {
+  margin: 0 0 60px 0;
+}
+
+
+/*文章内容页*/
+
+#comments {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+#comments .comments-title {
+  margin: 0 0 5px 0;
+}
+#comments .leave-comment {
+  display: block;
+  margin: 0 0 40px 0;
+}
+#comments ul,
+#comments ol {
+  margin: 0;
+  padding: 0;
+}
+#comments .comment {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+#comments .comments-title {
+  text-shadow: none;
+  margin-bottom: 0;
+}
+#comments .avatar {
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 30px;
+  border: 5px solid #eeeeee;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+}
+#comments .children {
+  margin: 0 0 0 90px;
+}
+#comments .comment-meta {
+  margin: 0 0 0 90px;
+}
+#comments .comment-meta a {
+  color: #333333;
+}
+#comments .comment-meta a:hover {
+  color: #bd1550;
+}
+#comments .comment-meta .author {
+  margin: 0 20px 0 0;
+  font-weight: bold;
+}
+#comments .comment-meta .date {
+  margin: 0 20px 0 0;
+}
+#comments .comment-meta .date a {
+  color: #666666;
+}
+#comments .comment-body {
+  margin: 0 0 35px 90px;
+}
+.border-top{
+  border-top: 1px solid #ccc;
+
+}
+
+
+
+
+/*尾部*/
+#footer {
+  background: #232323;
+  padding: 30px 0 0 0;
+  font-size: 12px;
+  color: #999;
+}
+#footer a {
+  color: #ccc;
+}
+#footer a:hover {
+  color: #fff;
+}
+#footer h3.widget-title {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  color: #ccc;
+  margin: 0 0 20px;
+}
+#underfooter {
+  background: #191919;
+  padding: 15px 0;
+  color: #777;
+  font-size: 12px;
+}
+#underfooter a {
+  color: #aaa;
+}
+#underfooter a:hover {
+  color: #fff;
+}
+#underfooter p {
+  margin: 0;
+}
+.follow-me-icons {
+  font-size: 30px;
+}
+.follow-me-icons i {
+  float: left;
+  margin: 0 10px 0 0;
+}

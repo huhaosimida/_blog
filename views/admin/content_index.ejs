@@ -1,0 +1,78 @@
+<%- include('layout') %>
+
+
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<ul class="breadcrumb">
+				<li>
+					 <a href="/admin">首页</a>
+				</li>
+				<li class="active">
+					文章首页
+				</li>
+			</ul>			
+			<h3>文章首页</h3>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>
+							ID
+						</th>
+						<th>
+							分类名称
+						</th>
+						<th>
+							标题
+						</th>
+						<th>
+							添加时间
+						</th>
+						<th>
+							阅读量
+						</th>
+						<th>
+							操作
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% for(var i=0; i<contents.length;i++) { %>
+						<tr>
+						<td>
+							<%= contents[i]._id %>
+						</td>
+						<td>
+							<%= contents[i].category.name %>
+						</td>
+						<td>
+							<%= contents[i].title %>
+						</td>
+						<td>
+							<%= moment(contents[i].addTime).format('YYYY-MM-DD : HH:MM:SS') %>
+						</td>
+						<td>
+							<%= contents[i].view %>
+						</td>
+						<td>
+							<a href="/admin/content/edit?id=<%=contents[i]._id %>">修改</a> |
+            				<a href="/admin/content/delete?id=<%=contents[i]._id %>">删除</a>
+						</td>
+					</tr>			
+					<% } %>	
+				</tbody>
+			</table>
+		</div>
+	<nav>
+   	<ul class="pager">
+        <li class="previous"><a href="/admin/contents?page=<%= page-1%>"><span aria-hidden="true">&larr;</span>上一页</a></li>
+        <li>一共有 <%= count %> 条数据，每页显示 <%= limit %> 条，总共 <%= pages %> 页，当前是第 <%= page %> 页</li>
+        <li class="next"><a href="/admin/contents?page=<%= page+1%>">下一页<span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+	</nav>
+</div>
+	
+
+</body>
+</html>
+

@@ -1,0 +1,68 @@
+<%- include('layout') %>
+
+
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<ul class="breadcrumb">
+				<li>
+					 <a href="/admin">首页</a>
+				</li>
+				<li class="active">
+					用户列表
+				</li>
+			</ul>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>
+							ID
+						</th>
+						<th>
+							用户名
+						</th>
+						<th>
+							密码
+						</th>
+						<th>
+							是否为管理员
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% for(var i=0; i<users.length;i++){%>
+						<tr>
+						<td>
+							<%= users[i]._id %>
+						</td>
+						<td>
+							<%= users[i].username %>
+						</td>
+						<td>
+							<%= users[i].password %>
+						</td>
+						<td>
+							<% if (users[i].isAdmin) { %>
+							 	是
+							 <% } else { %>
+								 否
+							 <% } %>
+						</td>
+					</tr>			
+					<% } %>	
+				</tbody>
+			</table>
+		</div>
+	</div>
+<nav>
+    <ul class="pager">
+        <li class="previous"><a href="/admin/user?page=<%= page-1%>"><span aria-hidden="true">&larr;</span>上一页</a></li>
+        <li>一共有 <%= count %> 条数据，每页显示 <%= limit %> 条，总共 <%= pages %> 页，当前是第 <%= page %> 页</li>
+        <li class="next"><a href="/admin/user?page=<%= page+1%>">下一页<span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+</nav>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,60 @@
+<%- include('layout') %>
+
+
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<ul class="breadcrumb">
+				<li>
+					 <a href="/admin">首页</a>
+				</li>
+				<li class="active">
+					分类列表
+				</li>
+			</ul>			
+			<h3>分类列表</h3>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>
+							ID
+						</th>
+						<th>
+							栏目名称
+						</th>
+						<th>
+							操作
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% for(var i=0; i<categories.length;i++) { %>
+						<tr>
+						<td>
+							<%= categories[i]._id %>
+						</td>
+						<td>
+							<%= categories[i].name %>
+						</td>
+						<td>
+							<a href="/admin/category/edit?id=<%=categories[i]._id %>">修改</a> |
+            				<a href="/admin/category/delete?id=<%=categories[i]._id %>">删除</a>
+						</td>
+					</tr>			
+					<% } %>	
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<nav>
+    <ul class="pager">
+        <li class="previous"><a href="/admin/category?page=<%= page-1%>"><span aria-hidden="true">&larr;</span>上一页</a></li>
+        <li>一共有 <%= count %> 条数据，每页显示 <%= limit %> 条，总共 <%= pages %> 页，当前是第 <%= page %> 页</li>
+        <li class="next"><a href="/admin/category?page=<%= page+1%>">下一页<span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+	</nav>
+</div>
+
+</body>
+</html>
+

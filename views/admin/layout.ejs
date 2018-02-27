@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>后台管理页面</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  	
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					 <a class="navbar-brand" href="/admin">后台管理</a>
+				</div>				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							 <a href="/admin">首页</a>
+						</li>
+						<li>
+							<a href="/admin/user">用户管理</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">分类管理<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									 <a href="/admin/category">分类首页</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									 <a href="/admin/category/add">添加分类</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">文章管理<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									 <a href="/admin/content">文章首页</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									 <a href="/admin/content/add">添加文章</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							 <a href="/admin/comment">评论</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%=userInfo1.username %><strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									 <a href="/">退出</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				
+			</nav>
+		</div>
+	</div>
+</div>
+
+
+
+
+

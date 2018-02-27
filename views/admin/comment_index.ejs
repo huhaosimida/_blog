@@ -1,0 +1,66 @@
+<%- include('layout') %>
+
+
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<ul class="breadcrumb">
+				<li>
+					 <a href="/admin">首页</a>
+				</li>
+				<li>
+					评论
+				</li>
+				<li class="active">
+					文章列表
+				</li>
+			</ul>			
+			<h3>文章列表</h3>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>
+							ID
+						</th>
+						<th>
+							分类名称
+						</th>
+						<th>
+							文章标题
+						</th>
+						<th>
+							操作
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% for(var i=0; i<contents.length;i++) { %>
+						<tr>
+						<td>
+							<%= contents[i]._id%>
+						</td>
+						<td>
+							<%= contents[i].category.name %>
+						</td>
+						<td>
+							<%= contents[i].title %>
+						</td>						
+						<td>
+            				<a href="/admin/comment/del?id=<%=contents[i]._id %>">查看评论</a>
+						</td>
+					</tr>			
+					<% } %>	
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<nav>
+    <ul class="pager">
+        <li class="previous"><a href=""><span aria-hidden="true">&larr;</span>上一页</a></li>
+        <li class="next"><a href="">下一页<span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+	</nav>
+</div>
+
+</body>
+</html>
